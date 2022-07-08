@@ -17,7 +17,7 @@ public class Categoria {
 	private long id;
 
 	@NotBlank(message = "Necessário inserir o nome do tema da categoria.")
-	private String Tema;
+	private String tema;
 
 	@NotNull(message = "Necessário inserir a idade sugerida dessa categoria.")
 	private int idadeSugerida;
@@ -35,12 +35,13 @@ public class Categoria {
 		this.id = id;
 	}
 
+	
 	public String getTema() {
-		return Tema;
+		return tema;
 	}
 
 	public void setTema(String tema) {
-		Tema = tema;
+		this.tema = tema;
 	}
 
 	public int getIdadeSugerida() {
