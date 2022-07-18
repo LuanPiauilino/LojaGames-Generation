@@ -35,7 +35,12 @@ public class Jogo {
 	@JsonIgnoreProperties("jogo")
 	private Categoria categoria;
 	
+	@ManyToOne
+	@JsonIgnoreProperties("jogo")
+	private Usuario usuario;
 	
+	
+
 
 	public long getId() {
 		return id;
@@ -83,5 +88,13 @@ public class Jogo {
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}
+	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 }
